@@ -44,6 +44,15 @@
         // Display division result in HTML
         let divisionResult = divideNumbers(24, 0);
         document.getElementById("divideOutput").innerHTML = "Division Result: " + (divisionResult === null ? "Cannot divide by zero" : divisionResult);
+
+        // Function removeFromArray
+        const users = [
+  { id: "user1", fullName: "John Doe" },
+  { id: "user2", fullName: "Jane Doe" }
+];
+
+const updatedUsers = removeFromArray(users, "user1");
+console.log(updatedUsers);
     </script>
 
 </body>
