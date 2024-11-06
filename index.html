@@ -3,11 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <script src="practice.js"></script>
+    <title>Display Results</title>
 </head>
 <body>
-    
+
+    <h1>JavaScript Calculation Results</h1>
+    <div id="stringOutput"></div>
+    <div id="multiplyOutput"></div>
+    <div id="divideOutput"></div>
+
+    <script>
+        let num1 = 10;
+        let num2 = 5;
+        let string1 = "Hello World";
+
+        let r1 = [1, 5, 9, "Day", "Night"];
+
+        // Display string1 in HTML
+        document.getElementById("stringOutput").innerHTML = string1;
+
+        function multiplyNumbers(num1, num2) {
+            let value = num1 * num2;
+            return value;
+        }
+
+        let res = multiplyNumbers(34, 2);
+
+        // Display multiplication result in HTML
+        document.getElementById("multiplyOutput").innerHTML = "Multiplication Result: " + res;
+
+        function divideNumbers(denominator, divider) {
+            if (divider == 0) {
+                return null;
+            } else {
+                let div = denominator / divider;
+                return div;
+            }
+        }
+
+        // Display division result in HTML
+        let divisionResult = divideNumbers(24, 0);
+        document.getElementById("divideOutput").innerHTML = "Division Result: " + (divisionResult === null ? "Cannot divide by zero" : divisionResult);
+    </script>
+
 </body>
 </html>
