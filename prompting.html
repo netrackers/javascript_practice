@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Results with User Input</title>
+</head>
+<body>
+
+    <h1>JavaScript Calculation Results</h1>
+    <div id="stringOutput"></div>
+    <div id="multiplyOutput"></div>
+    <div id="divideOutput"></div>
+
+    <script>
+        // Prompt user for input values
+        let num1 = parseFloat(prompt("Enter the first number for the multiplication:", "10"));
+        let num2 = parseFloat(prompt("Enter the second number for the multiplication:", "5"));
+        let denom = parseFloat(prompt("Enter the denominator (top) for the division:", "24"));
+        let divider = parseFloat(prompt("Enter the divider (bottom) for the division:", "0"));
+        let string1 = "Hello World";
+
+        // Display the string
+        document.getElementById("stringOutput").innerHTML = string1;
+
+        // Function for multiplication
+        function multiplyNumbers(num1, num2) {
+            let value = num1 * num2;
+            return value;
+        }
+
+        let res = multiplyNumbers(num1, num2);
+
+        // Display multiplication result
+        document.getElementById("multiplyOutput").innerHTML = "Multiplication Result: " + res;
+
+        // Function for division
+        function divideNumbers(denominator, divider) {
+            if (divider == 0) {
+                return null;
+            } else {
+                let div = denominator / divider;
+                return div;
+            }
+        }
+
+        // Display division result
+        let divisionResult = divideNumbers(denom, divider);
+        document.getElementById("divideOutput").innerHTML = "Division Result: " + (divisionResult === null ? "Cannot divide by zero" : divisionResult);
+    </script>
+
+</body>
+</html>
