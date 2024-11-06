@@ -26,3 +26,11 @@ function divideNumbers(denominator, divider) {
     }
 }
 console.log("Div=", divideNumbers(24, 0));
+
+const users = [
+  { id: "user1", fullName: "John Doe" },
+  { id: "user2", fullName: "Jane Doe" }
+];
+
+const updatedUsers = removeFromArray(users, "user1");
+console.log(updatedUsers);
